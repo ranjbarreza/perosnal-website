@@ -14,6 +14,17 @@ const GlobalStyle = createGlobalStyle`
     border-width: ${({ theme }) => theme.spacing(1.5)};
     border-style: solid;
     margin: 0;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Gudea', sans-serif;
   }
 
   *,

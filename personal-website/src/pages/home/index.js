@@ -18,8 +18,16 @@ export const Home = () => {
         <meta name="og:description" content={'Reza Ranjbar personal create react app website'} />
       </Helmet>
       <FullSection>
-        <h1>Hi</h1>
-        <p>I'm Reza</p>
+        <h1>
+          Hi,
+          <br />
+          I'm Reza
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip.
+        </p>
       </FullSection>
     </div>
   );
