@@ -1,7 +1,8 @@
-import { generateColor, generateSpacing } from 'style-genie';
+import { generateColor, generateSpacing, generateBreakpoint } from 'style-genie';
 
 export const defaultTheme = {
   spacing: generateSpacing(),
+  breakpoint: generateBreakpoint(),
   palette: {
     black: generateColor('#000000'),
     white: generateColor('#FFFFFF'),
