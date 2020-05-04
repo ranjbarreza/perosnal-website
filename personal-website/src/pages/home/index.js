@@ -3,7 +3,14 @@ import { Helmet } from 'react-helmet';
 import { H1 } from '../../components';
 import styled from 'styled-components';
 
-const FullSection = styled.section``;
+const FullSection = styled.section`
+  background-image: url('home-bg.png');
+  background-color: gray;
+  height: calc(100vh - 24px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 
 export const Home = () => {
   return (
@@ -19,16 +26,19 @@ export const Home = () => {
         <meta name="og:description" content={'Reza Ranjbar personal create react app website'} />
       </Helmet>
       <FullSection>
-        <H1>
-          Hi,
-          <br />
-          I'm Reza
-        </H1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip.
-        </p>
+        <div>
+          <H1>
+            Hi,
+            <br />
+            I'm Reza
+          </H1>
+          {/* <img src="./home-bg.png" alt="hi" /> */}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip.
+          </p>
+        </div>
       </FullSection>
     </div>
   );
