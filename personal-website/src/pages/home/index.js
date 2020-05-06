@@ -1,15 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { H1 } from '../../components';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import backgroundImage from './home-bg.png';
 
 const FullSection = styled.section`
-  background-image: url('home-bg.png');
-  background-color: gray;
+  background-image: url(${backgroundImage});
+  background-color: black;
   height: calc(100vh - 24px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+`;
+
+const HomeParagraph = styled.p`
+  ${({ theme }) => theme.breakpoint.up.sm} {
+    width: 32%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: ${({ theme }) => theme.spacing(13)};
+    padding-bottom: ${({ theme }) => theme.spacing(23)};
+    text-align: right;
+    font-size: 1.3rem;
+  }
 `;
 
 export const Home = () => {
@@ -26,19 +43,16 @@ export const Home = () => {
         <meta name="og:description" content={'Reza Ranjbar personal create react app website'} />
       </Helmet>
       <FullSection>
-        <div>
-          <H1>
-            Hi,
-            <br />
-            I'm Reza
-          </H1>
-          {/* <img src="./home-bg.png" alt="hi" /> */}
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip.
-          </p>
-        </div>
+        <H1>
+          Hi,
+          <br />
+          I'm Reza
+        </H1>
+        <HomeParagraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut <Link to="/lorem">aliquip</Link>.
+        </HomeParagraph>
       </FullSection>
     </div>
   );
