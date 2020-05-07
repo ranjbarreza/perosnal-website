@@ -33,7 +33,7 @@ const NavBurgerMenuButton = styled.button`
     .closed-icon {
       height: ${({ theme }) => theme.spacing(2)};
       width: ${({ theme }) => theme.spacing(2)};
-      opacity: 20%;
+      opacity: 0;
     }
 
     :hover {

@@ -7,7 +7,7 @@ import backgroundImage from './home-bg.png';
 
 const FullSection = styled.section`
   background-image: url(${backgroundImage});
-  background-color: black;
+  background-color: ${({ theme }) => theme.palette.black.color};
   height: calc(100vh - 24px);
   background-position: center;
   background-repeat: no-repeat;
