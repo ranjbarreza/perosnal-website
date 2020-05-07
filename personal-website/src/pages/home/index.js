@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { H1, NavBurgerMenu } from '../../components';
+import { H1 } from '../../components';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import backgroundImage from './home-bg.png';
@@ -43,7 +43,6 @@ export const Home = () => {
         <meta name="og:description" content={'Reza Ranjbar personal create react app website'} />
       </Helmet>
       <FullSection>
-        <NavBurgerMenu />
         <H1>
           Hi,
           <br />
