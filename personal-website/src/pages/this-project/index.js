@@ -13,7 +13,7 @@ const FullSection = styled.section`
   flex-direction: column;
 `;
 
-export const Lorem = () => {
+export const Project = () => {
   return (
     <div>
       <FullSection>
@@ -25,7 +25,7 @@ export const Lorem = () => {
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut <Link to="/lorem">aliquip</Link>.
+          ullamco laboris nisi ut <Link to="/work">aliquip</Link>.
         </p>
       </FullSection>
     </div>

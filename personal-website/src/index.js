@@ -3,7 +3,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme, GlobalStylesComponent } from './custom-styles';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, Lorem } from './pages';
+import { Home, Project, Work, Study, Me } from './pages';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { NavBurgerMenu } from './components';
@@ -18,8 +18,17 @@ const App = () => {
         {/* <IndexHelmet /> */}
         <NavBurgerMenu />
         <Switch>
-          <Route exact path="/lorem">
-            <Lorem />
+          <Route exact path="/project">
+            <Project />
+          </Route>
+          <Route exact path="/work">
+            <Work />
+          </Route>
+          <Route exact path="/study">
+            <Study />
+          </Route>
+          <Route exact path="/me">
+            <Me />
           </Route>
           <Route exact path="/">
             <Home />

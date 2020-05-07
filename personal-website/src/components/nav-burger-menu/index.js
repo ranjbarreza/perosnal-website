@@ -95,8 +95,23 @@ export const NavBurgerMenu = () => {
             </NavItemLink>
           </NavListItem>
           <NavListItem>
-            <NavItemLink to="/lorem" onClick={toggleOpen} exact>
-              Lorem
+            <NavItemLink to="/project" onClick={toggleOpen} exact>
+              Project
+            </NavItemLink>
+          </NavListItem>
+          <NavListItem>
+            <NavItemLink to="/work" onClick={toggleOpen} exact>
+              Work
+            </NavItemLink>
+          </NavListItem>
+          <NavListItem>
+            <NavItemLink to="/study" onClick={toggleOpen} exact>
+              Study
+            </NavItemLink>
+          </NavListItem>
+          <NavListItem>
+            <NavItemLink to="/me" onClick={toggleOpen} exact>
+              Me
             </NavItemLink>
           </NavListItem>
         </NavigationList>

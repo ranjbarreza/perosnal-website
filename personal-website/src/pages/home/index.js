@@ -51,7 +51,7 @@ export const Home = () => {
         <HomeParagraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut <Link to="/lorem">aliquip</Link>.
+          ullamco laboris nisi ut <Link to="/project">aliquip</Link>.
         </HomeParagraph>
       </FullSection>
     </div>
