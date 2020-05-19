@@ -28,6 +28,9 @@ const NavBurgerMenuButton = styled.button`
     img {
       height: ${({ theme }) => theme.spacing(4)};
       width: ${({ theme }) => theme.spacing(4)};
+      transition-property: width, height;
+      transition-duration: 0.15s;
+      transition-timing-function: ease-in-out;
     }
 
     .closed-icon {
