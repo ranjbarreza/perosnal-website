@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.palette.black.color};
+    background-color: ${({ theme }) => theme.palette.white.color};
     color: ${({ theme }) => theme.palette.white.color};
     border-color: ${({ theme }) => theme.palette.white.color};
     border-width: ${({ theme }) => theme.spacing(1.5)};
