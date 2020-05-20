@@ -1,12 +1,21 @@
 import React from 'react';
-// import { IndexHelmet } from './components';
-import { ThemeProvider } from 'styled-components';
-import { defaultTheme, GlobalStylesComponent } from './custom-styles';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, Project, Work, Study, Me } from './pages';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
+import { ThemeProvider } from 'styled-components';
 import { NavBurgerMenu } from './components';
+import { defaultTheme, GlobalStylesComponent } from './custom-styles';
+import './page-transform.css';
+import { Home, Me, Project, Study, Work } from './pages';
+import * as serviceWorker from './serviceWorker';
+
+const routes = [
+  { path: '/', name: 'Home', Component: Home },
+  { path: '/project', name: 'Project', Component: Project },
+  { path: '/work', name: 'Work', Component: Work },
+  { path: '/study', name: 'Study', Component: Study },
+  { path: '/me', name: 'Me', Component: Me },
+];
 
 const App = () => {
   return (
@@ -14,27 +23,19 @@ const App = () => {
       <GlobalStylesComponent />
 
       <Router>
-        {/* <Switch> */}
-        {/* <IndexHelmet /> */}
         <NavBurgerMenu />
-        <Switch>
-          <Route exact path="/project">
-            <Project />
+
+        {routes.map(({ path, Component }) => (
+          <Route key={path} exact path={path}>
+            {({ match }) => (
+              <CSSTransition in={match != null} timeout={300} classNames="page" unmountOnExit>
+                <div className="page">
+                  <Component />
+                </div>
+              </CSSTransition>
+            )}
           </Route>
-          <Route exact path="/work">
-            <Work />
-          </Route>
-          <Route exact path="/study">
-            <Study />
-          </Route>
-          <Route exact path="/me">
-            <Me />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
-        {/* </Switch> */}
+        ))}
       </Router>
     </ThemeProvider>
   );
