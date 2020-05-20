@@ -67,15 +67,28 @@ const NavItemLink = styled(NavLink)`
 const NavigationMenuContainer = styled.div`
   z-index: 998;
   background-color: ${({ theme }) => theme.palette.black.color};
+  opacity: 95%;
   color: ${({ theme }) => theme.palette.white.color};
   border-color: ${({ theme }) => theme.palette.white.color};
   border-width: ${({ theme }) => theme.spacing(1.5)};
-  border-style: solid;
+  border-style: solid solid solid hidden;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  width: 30%;
+  /* box-shadow: 25px 20px 50px gray; */
+
+  animation-name: menu-opening;
+  animation-duration: 1s;
+  @keyframes menu-opening {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 30%;
+    }
+  }
 `;
 
 export const NavBurgerMenu = () => {
