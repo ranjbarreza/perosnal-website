@@ -27,12 +27,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Gudea', sans-serif;
   }
 
+  a {
+    color: ${({ theme }) => theme.palette.white.color}
+  }
+
   *,
   *:after,
   *:before {
     box-sizing: border-box;
   }
-
  
 `;
 

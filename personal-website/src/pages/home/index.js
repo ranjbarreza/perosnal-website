@@ -43,13 +43,19 @@ export const Home = () => {
     <div>
       <Helmet>
         <title>Reza Ranjbar | Homepage</title>
-        <meta name="description" content={'Reza Ranjbar personal create react app website'} />
+        <meta
+          name="description"
+          content={'Reza Ranjbar, junior developer, personal create react app website'}
+        />
         <meta
           name="keywords"
           content="Reza, Ranjbar, Reza Ranjbar, developer, web developer, web, IT, software developer, frontend, frontend developer"
         />
         <meta name="og:title" content={'Reza Ranjbar personal website'} />
-        <meta name="og:description" content={'Reza Ranjbar personal create react app website'} />
+        <meta
+          name="og:description"
+          content={'Reza Ranjbar, junior developer, personal create react app website'}
+        />
       </Helmet>
       <FullSection>
         <Greetings

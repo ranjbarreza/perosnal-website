@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-// import backgroundImage from './home-bg.png';
 
 const FullSection = styled.section`
   background-color: black;
@@ -12,21 +11,46 @@ const FullSection = styled.section`
   display: flex;
   flex-direction: column;
 `;
+const LeftParagraph = styled.p`
+  ${({ theme }) => theme.breakpoint.up.sm} {
+    width: 32%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: ${({ theme }) => theme.spacing(13)};
+    padding-bottom: ${({ theme }) => theme.spacing(46)};
+    text-align: left;
+    font-size: 1.3rem;
+  }
+`;
+
+const RightParagraph = styled.p`
+  ${({ theme }) => theme.breakpoint.up.sm} {
+    width: 32%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: ${({ theme }) => theme.spacing(13)};
+    padding-bottom: ${({ theme }) => theme.spacing(23)};
+    text-align: right;
+    font-size: 1.3rem;
+  }
+`;
 
 export const Study = () => {
   return (
     <div>
       <FullSection>
-        <h1>
-          Hi,
-          <br />
-          I'm Reza
-        </h1>
-        <p>
+        <LeftParagraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip.
+        </LeftParagraph>
+        <RightParagraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco laboris nisi ut <Link to="/me">aliquip</Link>.
-        </p>
+        </RightParagraph>
       </FullSection>
     </div>
   );

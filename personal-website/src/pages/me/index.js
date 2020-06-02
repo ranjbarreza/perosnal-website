@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import backgroundImage from './me-bg.png';
+import { Helmet } from 'react-helmet';
 
 const FullSection = styled.section`
   background-image: url(${backgroundImage});
@@ -33,7 +34,7 @@ const ContactTable = styled.table`
     right: 0;
     bottom: 0;
     padding-right: ${({ theme }) => theme.spacing(11)};
-    padding-bottom: ${({ theme }) => theme.spacing(12)};
+    padding-bottom: ${({ theme }) => theme.spacing(20)};
     text-align: right;
     font-size: 1.25rem;
   }
@@ -43,10 +44,6 @@ const TR = styled.tr`
   display: flex;
   flex-direction: column;
   padding-bottom: ${({ theme }) => theme.spacing(2)};
-
-  :last-child {
-    padding-top: ${({ theme }) => theme.spacing(6)};
-  }
 
   ${({ theme }) => theme.breakpoint.down.sm} {
     display: flex;
@@ -76,6 +73,24 @@ const RightTd = styled.td`
 export const Me = () => {
   return (
     <div>
+      <Helmet>
+        <title>Reza Ranjbar | Contact</title>
+        <meta
+          name="description"
+          content={
+            'Reza Ranjbar, junior developer, personal create react app website - contact page'
+          }
+        />
+        <meta
+          name="keywords"
+          content="Reza, Ranjbar, Reza Ranjbar, developer, web developer, web, IT, software developer, frontend, frontend developer, LinkedIn, GitHub"
+        />
+        <meta name="og:title" content={'Reza Ranjbar personal website'} />
+        <meta
+          name="og:description"
+          content={'Reza Ranjbar, junior developer, personal create react app website'}
+        />
+      </Helmet>
       <FullSection>
         <LeftParagraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -100,19 +115,6 @@ export const Me = () => {
               <LeftTd>Here's my email address:</LeftTd>
               <RightTd>
                 <a href="mailto:reza.r.baar@gmail.com">reza.r.baar@gmail.com</a>
-              </RightTd>
-            </TR>
-            <TR>
-              <LeftTd>You can also call me, good luck with that:</LeftTd>
-              <RightTd>
-                <a href="tel:+31685762342">+31 6 8576 2342</a>
-              </RightTd>
-            </TR>
-            <TR>
-              <LeftTd>Or do it the old fashion way:</LeftTd>
-              <RightTd>
-                Ryelandstraat 51, 3573 SZ,
-                <br /> Utrecht, the Netherlands
               </RightTd>
             </TR>
           </tbody>
