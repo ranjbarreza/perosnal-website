@@ -102,13 +102,25 @@ export const Me = () => {
             <TR>
               <LeftTd>Contact me on LinkedIn like a professional:</LeftTd>
               <RightTd>
-                <a href="https://www.linkedin.com/in/rezaranjbaar/">LinkedIn</a>
+                <a
+                  href="https://www.linkedin.com/in/rezaranjbaar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
               </RightTd>
             </TR>
             <TR>
               <LeftTd>Check out my Github if you're a nerdy:</LeftTd>
               <RightTd>
-                <a href="https://github.com/ranjbarreza/perosnal-website">Github</a>
+                <a
+                  href="https://github.com/ranjbarreza/perosnal-website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </a>
               </RightTd>
             </TR>
             <TR>
