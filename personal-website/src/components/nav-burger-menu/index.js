@@ -117,7 +117,7 @@ export const NavBurgerMenu = () => {
           </NavListItem>
           <NavListItem>
             <NavItemLink to="/project" onClick={toggleOpen} exact>
-              Project
+              This Project
             </NavItemLink>
           </NavListItem>
           <NavListItem>

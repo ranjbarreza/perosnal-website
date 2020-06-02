@@ -18,13 +18,9 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Gudea', sans-serif;
+  p{
+    line-height: 140%;
+    font-size: 1.3rem;
   }
 
   a {

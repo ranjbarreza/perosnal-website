@@ -23,7 +23,6 @@ const LeftParagraph = styled.p`
     padding-left: ${({ theme }) => theme.spacing(13)};
     padding-bottom: ${({ theme }) => theme.spacing(46)};
     text-align: left;
-    font-size: 1.3rem;
   }
 `;
 

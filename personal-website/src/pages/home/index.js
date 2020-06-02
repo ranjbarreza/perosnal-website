@@ -26,7 +26,6 @@ const HomeParagraph = styled.p`
     padding-right: ${({ theme }) => theme.spacing(13)};
     padding-bottom: ${({ theme }) => theme.spacing(23)};
     text-align: right;
-    font-size: 1.3rem;
   }
 `;
 
@@ -64,7 +63,7 @@ export const Home = () => {
         />
         <HomeParagraph>
           I'm a junior web developer. I strive for growing and getting results. The journey is long,
-          but I'm one hell of a dedicated.
+          but I'm dedicated as hell.
           <br /> <br />
           Now, let me tell you about <Link to="/project">this website</Link>.
         </HomeParagraph>

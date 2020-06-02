@@ -10,51 +10,38 @@ const FullSection = styled.section`
   background-size: cover;
   display: flex;
   flex-direction: column;
-`;
-const LeftParagraph = styled.p`
-  ${({ theme }) => theme.breakpoint.up.sm} {
-    width: 32%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding-left: ${({ theme }) => theme.spacing(13)};
-    padding-bottom: ${({ theme }) => theme.spacing(13)};
-    text-align: left;
-    font-size: 1.3rem;
-  }
+  padding: ${({ theme }) => theme.spacing(20)};
 `;
 
-const RightParagraph = styled.p`
-  ${({ theme }) => theme.breakpoint.up.sm} {
-    width: 32%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-right: ${({ theme }) => theme.spacing(13)};
-    padding-top: ${({ theme }) => theme.spacing(13)};
-    text-align: right;
-    font-size: 1.3rem;
-  }
+const ScrambledLink = styled.a`
+  color: ${({ theme }) => theme.palette.mySinYellowOrange.color};
+  font-weight: bolder;
 `;
 
 export const Work = () => {
   return (
     <div>
       <FullSection>
-        <LeftParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip.
-        </LeftParagraph>
-        <RightParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut <Link to="/study">aliquip</Link>.
-        </RightParagraph>
+        <p>
+          Since September 2019, I am working at{' '}
+          <ScrambledLink href="https://scrambled.com" target="_blank" rel="noopener noreferrer">
+            Scrambled
+          </ScrambledLink>{' '}
+          as a junior developer.
+        </p>
+        <p style={{ textAlign: 'center', padding: '0 50px' }}>
+          I work on different projects such as Creassist, a Google Assistant applications prototype;
+          FromSam, data driven beauty sampling; and Scrambled's new brand website (soon to go live).{' '}
+          Days mostly start with a quick standup sharing what we did the day before and the plans
+          for the new day. Coding independently or reviewing a pull request comes next.
+          <br />
+          The technologies I use frequently at Scrambled are: HTML, CSS, Javascript, React,
+          TypeScript, Node.js, PosgreSQL, Git, Docker, Storybook, Bootstrap, Material UI, and React
+          Gatsby.
+        </p>
+        <p style={{ textAlign: 'right' }}>
+          There are also other programs I learned while <Link to="/study">studying</Link>.
+        </p>
       </FullSection>
     </div>
   );
