@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { H1 } from '../../components';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import backgroundImage from './home-bg.png';
+import { ReactComponent as Greetings } from './greeting-svg.svg';
+import './greeting-svg.css';
 
 const FullSection = styled.section`
   background-image: url(${backgroundImage});
@@ -30,6 +31,14 @@ const HomeParagraph = styled.p`
 `;
 
 export const Home = () => {
+  const [showAutograph, setShowAutograph] = useState(false);
+
+  useEffect(() => {
+    setInterval(() => {
+      setShowAutograph(true);
+    }, 100);
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -43,11 +52,10 @@ export const Home = () => {
         <meta name="og:description" content={'Reza Ranjbar personal create react app website'} />
       </Helmet>
       <FullSection>
-        <H1>
-          Hi,
-          <br />
-          I'm Reza
-        </H1>
+        <Greetings
+          className={showAutograph ? 'active' : ''}
+          style={{ width: '30vmin', height: '30vmin', margin: '150px' }}
+        />
         <HomeParagraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
