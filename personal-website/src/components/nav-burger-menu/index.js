@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import OpenedBurgerMenu from './opened.svg';
 import ClosedBurgerMenu from './closed.svg';
+import LinkedInIcon from './white-linkedin.svg';
 
 const NavBurgerMenuButton = styled.button`
   position: absolute;
@@ -56,11 +57,17 @@ const NavigationList = styled.ul`
   list-style: none;
 `;
 
-const NavListItem = styled.li``;
+const NavListItem = styled.li`
+  padding-top: ${({ theme }) => theme.spacing(2)};
+
+  :last-child {
+    padding-top: ${({ theme }) => theme.spacing(15)};
+  }
+`;
 
 const NavItemLink = styled(NavLink)`
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 `;
 
 const NavigationMenuContainer = styled.div`
@@ -127,6 +134,15 @@ export const NavBurgerMenu = () => {
             <NavItemLink to="/me" onClick={toggleOpen} exact>
               Me
             </NavItemLink>
+          </NavListItem>
+          <NavListItem>
+            <a
+              href="https://www.linkedin.com/in/rezaranjbaar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={LinkedInIcon} alt="LinkedIn Icon" />
+            </a>
           </NavListItem>
         </NavigationList>
       </NavigationMenuContainer>
