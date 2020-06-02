@@ -63,9 +63,10 @@ export const Home = () => {
           style={{ width: '30vmin', height: '30vmin', margin: '150px' }}
         />
         <HomeParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut <Link to="/project">aliquip</Link>.
+          I'm a junior web developer. I strive for growing and getting results. The journey is long,
+          but I'm one hell of a dedicated.
+          <br /> <br />
+          Now, let me tell you about <Link to="/project">this website</Link>.
         </HomeParagraph>
       </FullSection>
     </div>

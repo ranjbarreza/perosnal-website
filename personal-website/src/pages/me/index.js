@@ -93,9 +93,9 @@ export const Me = () => {
       </Helmet>
       <FullSection>
         <LeftParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip.
+          My name is Reza Ranjbar. I was born in 1995 in Iran and moved to the Netherlands in 2018.
+          Utrecht has been a good home for me ever since. I enjoy occasional beers with friends on a
+          Friday evening or a game of Rummikub on Saturday afternoon.
         </LeftParagraph>
         <ContactTable>
           <tbody>

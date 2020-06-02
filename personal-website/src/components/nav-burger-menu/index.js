@@ -13,7 +13,7 @@ const NavBurgerMenuButton = styled.button`
   display: flex;
   align-items: center;
   z-index: 999;
-
+  background-color: ${({ theme }) => theme.palette.white.color};
   img {
     height: ${({ theme }) => theme.spacing(3)};
     width: ${({ theme }) => theme.spacing(3)};
@@ -60,7 +60,6 @@ const NavListItem = styled.li``;
 
 const NavItemLink = styled(NavLink)`
   text-decoration: none;
-  color: ${({ theme }) => theme.palette.white.color};
   font-size: 1.1rem;
 `;
 
@@ -77,7 +76,6 @@ const NavigationMenuContainer = styled.div`
   right: 0;
   bottom: 0;
   width: 30%;
-  /* box-shadow: 25px 20px 50px gray; */
 
   animation-name: menu-opening;
   animation-duration: 1s;
