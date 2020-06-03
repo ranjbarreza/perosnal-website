@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import backgroundImage from './homepage.jpg';
-import { ReactComponent as Greetings } from './greeting-svg.svg';
+import { ReactComponent as Greeting } from './greeting-svg.svg';
 import './greeting-svg.css';
 import { PageLayout } from '../../components';
 
@@ -13,6 +13,9 @@ const HomePageLayout = styled(PageLayout)`
 `;
 
 const HomeParagraph = styled.p`
+  padding: ${({ theme }) => theme.spacing(1)};
+  margin: 0;
+
   ${({ theme }) => theme.breakpoint.up.sm} {
     width: 32%;
     position: absolute;
@@ -21,6 +24,16 @@ const HomeParagraph = styled.p`
     padding-right: ${({ theme }) => theme.spacing(13)};
     padding-bottom: ${({ theme }) => theme.spacing(23)};
     text-align: right;
+  }
+`;
+
+const AutographGreeting = styled(Greeting)`
+  width: 30vmin;
+  height: 30vmin;
+  margin: ${({ theme }) => theme.spacing(19)};
+  ${({ theme }) => theme.breakpoint.down.sm} {
+    margin: auto;
+    margin-top: ${({ theme }) => theme.spacing(8)};
   }
 `;
 
@@ -52,10 +65,7 @@ export const Home = () => {
         />
       </Helmet>
       <HomePageLayout>
-        <Greetings
-          className={showAutograph ? 'active' : ''}
-          style={{ width: '30vmin', height: '30vmin', margin: '150px' }}
-        />
+        <AutographGreeting className={showAutograph ? 'active' : ''} />
         <HomeParagraph>
           I'm a junior web developer. I strive for growing and getting results. The journey is long,
           but I'm dedicated as hell.

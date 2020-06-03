@@ -77,12 +77,12 @@ const NavigationMenuContainer = styled.div`
   color: ${({ theme }) => theme.palette.white.color};
   border-color: ${({ theme }) => theme.palette.white.color};
   border-width: ${({ theme }) => theme.spacing(1.5)};
-  border-style: solid solid solid hidden;
+  border-style: solid;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 30%;
+  width: 100%;
 
   animation-name: menu-opening;
   animation-duration: 1s;
@@ -91,8 +91,15 @@ const NavigationMenuContainer = styled.div`
       width: 0%;
     }
     100% {
-      width: 30%;
+      ${({ theme }) => theme.breakpoint.up.sm} {
+        border-style: solid solid solid hidden;
+        width: 30%;
+      }
     }
+  }
+  ${({ theme }) => theme.breakpoint.up.sm} {
+    border-style: solid solid solid hidden;
+    width: 30%;
   }
 `;
 

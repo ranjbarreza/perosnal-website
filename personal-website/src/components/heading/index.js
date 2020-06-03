@@ -11,7 +11,7 @@ const defaultStyles = css`
 
 export const H3 = styled.h3`
   ${defaultStyles}
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 
   ${({ theme }) => theme.breakpoint.up.md} {
     font-size: 2rem;

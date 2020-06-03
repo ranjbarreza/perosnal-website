@@ -10,28 +10,45 @@ const ProjectPageLayout = styled(PageLayout)`
 `;
 
 const paragraphDefaults = css`
-  width: 32%;
-  position: absolute;
-  bottom: 0;
-`;
+  ${({ theme }) => theme.breakpoint.down.sm} {
+    margin: 0;
+    padding: ${({ theme }) => theme.spacing(1)};
+    width: 100%;
+  }
 
-const LeftParagraph = styled.p`
   ${({ theme }) => theme.breakpoint.up.sm} {
-    ${paragraphDefaults}
-    left: 0;
-    padding-left: ${({ theme }) => theme.spacing(13)};
-    padding-bottom: ${({ theme }) => theme.spacing(40)};
-    text-align: left;
+    width: 32%;
+    position: absolute;
+    bottom: 0;
   }
 `;
 
+const LeftParagraph = styled.p`
+  ${paragraphDefaults}
+  left: 0;
+  padding-left: ${({ theme }) => theme.spacing(13)};
+  padding-bottom: ${({ theme }) => theme.spacing(40)};
+  text-align: left;
+`;
+
 const RightParagraph = styled.p`
-  ${({ theme }) => theme.breakpoint.up.sm} {
-    ${paragraphDefaults}
+  ${paragraphDefaults}
+  right: 0;
+  padding-right: ${({ theme }) => theme.spacing(13)};
+  padding-bottom: ${({ theme }) => theme.spacing(20)};
+  text-align: right;
+
+  ${({ theme }) => theme.breakpoint.down.sm} {
+    color: ${({ theme }) => theme.palette.black.color};
+    position: absolute;
+    bottom: 0;
     right: 0;
-    padding-right: ${({ theme }) => theme.spacing(13)};
-    padding-bottom: ${({ theme }) => theme.spacing(20)};
-    text-align: right;
+    padding-right: ${({ theme }) => theme.spacing(2)};
+    padding-bottom: ${({ theme }) => theme.spacing(8)};
+    width: 95%;
+    a {
+      color: ${({ theme }) => theme.palette.black.color};
+    }
   }
 `;
 
