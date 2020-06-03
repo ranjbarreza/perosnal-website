@@ -28,7 +28,7 @@ const App = () => {
         {routes.map(({ path, Component }) => (
           <Route key={path} exact path={path}>
             {({ match }) => (
-              <CSSTransition in={match != null} timeout={300} classNames="page" unmountOnExit>
+              <CSSTransition in={match != null} timeout={350} classNames="page" unmountOnExit>
                 <div className="page">
                   <Component />
                 </div>
