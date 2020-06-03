@@ -19,8 +19,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p{
-    line-height: 140%;
-    font-size: 1.3rem;
+    line-height: 120%;
+    font-size: 1.1rem;
+
+    ${({ theme }) => theme.breakpoint.up.md} {
+      line-height: 140%;
+      font-size: 1.3rem;
+  }
   }
 
   a {

@@ -14,13 +14,17 @@ const StudyPageLayout = styled(PageLayout)`
 `;
 
 const divDefaults = css`
-  width: 35%;
-  position: absolute;
+  padding: ${({ theme }) => theme.spacing(1)};
+  margin: 0;
+  ${({ theme }) => theme.breakpoint.up.sm} {
+    width: 35%;
+    position: absolute;
+  }
 `;
 
 const LeftPart = styled.div`
+  ${divDefaults}
   ${({ theme }) => theme.breakpoint.up.sm} {
-    ${divDefaults}
     left: 0;
     bottom: 0;
     padding-left: ${({ theme }) => theme.spacing(13)};
@@ -30,8 +34,8 @@ const LeftPart = styled.div`
 `;
 
 const RightPart = styled.div`
+  ${divDefaults}
   ${({ theme }) => theme.breakpoint.up.sm} {
-    ${divDefaults}
     right: 0;
     top: 0;
     padding-right: ${({ theme }) => theme.spacing(13)};
@@ -41,13 +45,17 @@ const RightPart = styled.div`
 `;
 
 const MeDiv = styled.div`
-  width: 45%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding-right: ${({ theme }) => theme.spacing(13)};
-  padding-bottom: ${({ theme }) => theme.spacing(13)};
   text-align: right;
+  padding: ${({ theme }) => theme.spacing(4, 1, 0, 1)};
+
+  ${({ theme }) => theme.breakpoint.up.sm} {
+    width: 45%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: ${({ theme }) => theme.spacing(13)};
+    padding-bottom: ${({ theme }) => theme.spacing(13)};
+  }
 `;
 
 export const Study = () => {

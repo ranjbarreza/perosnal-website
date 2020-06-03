@@ -10,6 +10,10 @@ const MePageLayout = styled(PageLayout)`
 `;
 
 const LeftParagraph = styled.p`
+  margin: 0;
+  padding: ${({ theme }) => theme.spacing(1)};
+  width: 100%;
+
   ${({ theme }) => theme.breakpoint.up.sm} {
     width: 32%;
     position: absolute;
@@ -22,6 +26,14 @@ const LeftParagraph = styled.p`
 `;
 
 const ContactTable = styled.table`
+  ${({ theme }) => theme.breakpoint.down.sm} {
+    color: ${({ theme }) => theme.palette.black.color};
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: ${({ theme }) => theme.spacing(2)};
+  }
+
   ${({ theme }) => theme.breakpoint.up.sm} {
     width: 40%;
     position: absolute;
@@ -42,13 +54,11 @@ const TR = styled.tr`
   ${({ theme }) => theme.breakpoint.down.sm} {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: right;
   }
 `;
 
 const LeftTd = styled.td`
-  padding-right: ${({ theme }) => theme.spacing(10)};
-
   ${({ theme }) => theme.breakpoint.down.sm} {
     padding-bottom: ${({ theme }) => theme.spacing(0.5)};
   }
@@ -63,7 +73,11 @@ const RightTd = styled.td`
   }
 
   ${({ theme }) => theme.breakpoint.down.sm} {
-    padding: ${({ theme }) => theme.spacing(0, 0, 6, 0)};
+    padding: ${({ theme }) => theme.spacing(0, 0, 2, 0)};
+
+    a {
+      color: ${({ theme }) => theme.palette.black.color};
+    }
   }
 `;
 
