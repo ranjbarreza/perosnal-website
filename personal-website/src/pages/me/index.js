@@ -123,7 +123,7 @@ export const Me = () => {
               </RightTd>
             </TR>
             <TR>
-              <LeftTd>Check out my Github if you're a nerdy:</LeftTd>
+              <LeftTd>Check out my Github if you're nerdy:</LeftTd>
               <RightTd>
                 <a
                   href="https://github.com/ranjbarreza/perosnal-website"
