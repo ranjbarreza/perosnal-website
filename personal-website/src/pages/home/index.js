@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import backgroundImage from './home-bg.png';
+import backgroundImage from './homepage.jpg';
 import { ReactComponent as Greetings } from './greeting-svg.svg';
 import './greeting-svg.css';
 

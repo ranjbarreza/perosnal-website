@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import backgroundImage from './me-bg.png';
+import backgroundImage from './me.jpg';
 import { Helmet } from 'react-helmet';
 
 const FullSection = styled.section`

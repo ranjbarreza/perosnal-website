@@ -4,7 +4,14 @@ import styled from 'styled-components';
 import { H3, H5 } from '../../components/heading';
 
 const FullSection = styled.section`
-  background-color: black;
+  background-color: ${({ theme }) => theme.palette.darkGray.color};
+  background: linear-gradient(
+    45deg,
+    ${({ theme }) => theme.palette.darkGray.color} 20%,
+    ${({ theme }) => theme.palette.mediumGray.color} 80%,
+    ${({ theme }) => theme.palette.lightGray.color} 100%
+  );
+
   height: calc(100vh - 24px);
   background-position: center;
   background-repeat: no-repeat;

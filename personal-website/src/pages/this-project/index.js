@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import backgroundImage from './project-bg.png';
+import backgroundImage from './project.jpg';
 
 const FullSection = styled.section`
   background-image: url(${backgroundImage});
