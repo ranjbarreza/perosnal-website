@@ -66,8 +66,15 @@ export const Project = () => {
         <RightParagraph>
           The structure of this project consists of a pages directory for the skeleton of each page,
           a components directory for repetitive components, and a custom-styles directory for themes
-          and style rules declared globally. I also have other{' '}
-          <Link to="/work">hands-on experiences</Link>.
+          and style rules declared globally. Check out{' '}
+          <a
+            href="https://github.com/ranjbarreza/personal-website"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>{' '}
+          for this project or see my other <Link to="/work">hands-on experiences</Link>.
         </RightParagraph>
       </ProjectPageLayout>
     </div>
