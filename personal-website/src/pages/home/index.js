@@ -5,16 +5,11 @@ import styled from 'styled-components';
 import backgroundImage from './homepage.jpg';
 import { ReactComponent as Greetings } from './greeting-svg.svg';
 import './greeting-svg.css';
+import { PageLayout } from '../../components';
 
-const FullSection = styled.section`
+const HomePageLayout = styled(PageLayout)`
   background-image: url(${backgroundImage});
   background-color: ${({ theme }) => theme.palette.black.color};
-  height: calc(100vh - 24px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
 `;
 
 const HomeParagraph = styled.p`
@@ -56,7 +51,7 @@ export const Home = () => {
           content={'Reza Ranjbar, junior developer, personal create react app website'}
         />
       </Helmet>
-      <FullSection>
+      <HomePageLayout>
         <Greetings
           className={showAutograph ? 'active' : ''}
           style={{ width: '30vmin', height: '30vmin', margin: '150px' }}
@@ -67,7 +62,7 @@ export const Home = () => {
           <br /> <br />
           Now, let me tell you about <Link to="/project">this website</Link>.
         </HomeParagraph>
-      </FullSection>
+      </HomePageLayout>
     </div>
   );
 };

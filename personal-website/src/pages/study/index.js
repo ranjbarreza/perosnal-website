@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { H3, H5 } from '../../components/heading';
+import styled, { css } from 'styled-components';
+import { PageLayout, H3, H5 } from '../../components';
 
-const FullSection = styled.section`
+const StudyPageLayout = styled(PageLayout)`
   background-color: ${({ theme }) => theme.palette.darkGray.color};
   background: linear-gradient(
     45deg,
@@ -11,18 +11,16 @@ const FullSection = styled.section`
     ${({ theme }) => theme.palette.mediumGray.color} 80%,
     ${({ theme }) => theme.palette.lightGray.color} 100%
   );
-
-  height: calc(100vh - 24px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
 `;
+
+const divDefaults = css`
+  width: 35%;
+  position: absolute;
+`;
+
 const LeftPart = styled.div`
   ${({ theme }) => theme.breakpoint.up.sm} {
-    width: 35%;
-    position: absolute;
+    ${divDefaults}
     left: 0;
     bottom: 0;
     padding-left: ${({ theme }) => theme.spacing(13)};
@@ -33,8 +31,7 @@ const LeftPart = styled.div`
 
 const RightPart = styled.div`
   ${({ theme }) => theme.breakpoint.up.sm} {
-    width: 35%;
-    position: absolute;
+    ${divDefaults}
     right: 0;
     top: 0;
     padding-right: ${({ theme }) => theme.spacing(13)};
@@ -43,7 +40,7 @@ const RightPart = styled.div`
   }
 `;
 
-const HolaDiv = styled.div`
+const MeDiv = styled.div`
   width: 45%;
   position: absolute;
   right: 0;
@@ -56,7 +53,7 @@ const HolaDiv = styled.div`
 export const Study = () => {
   return (
     <div>
-      <FullSection>
+      <StudyPageLayout>
         <LeftPart>
           <H3>Chamran university Ahvaz, Iran</H3>
           <H5>2013-2017</H5>
@@ -82,12 +79,12 @@ export const Study = () => {
             </a>
           </p>
         </RightPart>
-        <HolaDiv>
+        <MeDiv>
           <H3>
             Now it's time to know a little more about <Link to="/me">me</Link>.
           </H3>
-        </HolaDiv>
-      </FullSection>
+        </MeDiv>
+      </StudyPageLayout>
     </div>
   );
 };

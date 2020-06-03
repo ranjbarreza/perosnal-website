@@ -1,25 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import backgroundImage from './project.jpg';
+import { PageLayout } from '../../components';
 
-const FullSection = styled.section`
+const ProjectPageLayout = styled(PageLayout)`
   background-image: url(${backgroundImage});
   background-color: ${({ theme }) => theme.palette.blueGray.color};
-  height: calc(100vh - 24px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
+`;
+
+const paragraphDefaults = css`
+  width: 32%;
+  position: absolute;
+  bottom: 0;
 `;
 
 const LeftParagraph = styled.p`
   ${({ theme }) => theme.breakpoint.up.sm} {
-    width: 32%;
-    position: absolute;
+    ${paragraphDefaults}
     left: 0;
-    bottom: 0;
     padding-left: ${({ theme }) => theme.spacing(13)};
     padding-bottom: ${({ theme }) => theme.spacing(40)};
     text-align: left;
@@ -28,10 +27,8 @@ const LeftParagraph = styled.p`
 
 const RightParagraph = styled.p`
   ${({ theme }) => theme.breakpoint.up.sm} {
-    width: 32%;
-    position: absolute;
+    ${paragraphDefaults}
     right: 0;
-    bottom: 0;
     padding-right: ${({ theme }) => theme.spacing(13)};
     padding-bottom: ${({ theme }) => theme.spacing(20)};
     text-align: right;
@@ -41,7 +38,7 @@ const RightParagraph = styled.p`
 export const Project = () => {
   return (
     <div>
-      <FullSection>
+      <ProjectPageLayout>
         <LeftParagraph>
           This website is a single page application made with create-react-app as a personal
           project. It is deployed with Surge, a free static web publishing service. For styling, I'm
@@ -55,7 +52,7 @@ export const Project = () => {
           and style rules declared globally. I also have other{' '}
           <Link to="/work">hands-on experiences</Link>.
         </RightParagraph>
-      </FullSection>
+      </ProjectPageLayout>
     </div>
   );
 };

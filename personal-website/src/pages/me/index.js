@@ -2,16 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import backgroundImage from './me.jpg';
 import { Helmet } from 'react-helmet';
+import { PageLayout } from '../../components';
 
-const FullSection = styled.section`
+const MePageLayout = styled(PageLayout)`
   background-image: url(${backgroundImage});
   background-color: ${({ theme }) => theme.palette.mySinYellowOrange.color};
-  height: calc(100vh - 24px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
 `;
 
 const LeftParagraph = styled.p`
@@ -63,6 +58,9 @@ const RightTd = styled.td`
   a {
     color: ${({ theme }) => theme.palette.white.color};
   }
+  p {
+    margin: 0;
+  }
 
   ${({ theme }) => theme.breakpoint.down.sm} {
     padding: ${({ theme }) => theme.spacing(0, 0, 6, 0)};
@@ -90,11 +88,11 @@ export const Me = () => {
           content={'Reza Ranjbar, junior developer, personal create react app website'}
         />
       </Helmet>
-      <FullSection>
+      <MePageLayout>
         <LeftParagraph>
           My name is Reza Ranjbar. I was born in 1995 in Iran and moved to the Netherlands in 2018.
           Utrecht has been a good home for me ever since. I enjoy occasional beers with friends on a
-          Friday evening or a game of Rummikub on Saturday afternoon.
+          Friday evening or a game of Rummikub on a Saturday afternoon.
         </LeftParagraph>
         <ContactTable>
           <tbody>
@@ -125,12 +123,12 @@ export const Me = () => {
             <TR>
               <LeftTd>Here's my email address:</LeftTd>
               <RightTd>
-                <a href="mailto:reza.r.baar@gmail.com">reza.r.baar@gmail.com</a>
+                <p>reza.r.baar at gmail.com</p>
               </RightTd>
             </TR>
           </tbody>
         </ContactTable>
-      </FullSection>
+      </MePageLayout>
     </div>
   );
 };
