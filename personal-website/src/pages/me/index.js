@@ -89,9 +89,7 @@ export const Me = () => {
         <title>Reza Ranjbar | Contact</title>
         <meta
           name="description"
-          content={
-            'Reza Ranjbar, junior developer, personal create react app website - contact page'
-          }
+          content={'Reza Ranjbar, junior developer, personal resume website - contact page'}
         />
         <meta
           name="keywords"
