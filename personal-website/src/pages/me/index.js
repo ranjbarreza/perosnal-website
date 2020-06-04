@@ -70,6 +70,7 @@ const RightTd = styled.td`
   }
   p {
     margin: 0;
+    font-size: inherit;
   }
 
   ${({ theme }) => theme.breakpoint.down.sm} {
