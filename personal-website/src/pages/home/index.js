@@ -13,7 +13,7 @@ const HomePageLayout = styled(PageLayout)`
 `;
 
 const HomeParagraph = styled.p`
-  padding: ${({ theme }) => theme.spacing(1)};
+  padding: ${({ theme }) => theme.spacing(5, 1)};
   margin: 0;
 
   ${({ theme }) => theme.breakpoint.up.sm} {

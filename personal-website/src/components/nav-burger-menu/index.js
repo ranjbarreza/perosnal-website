@@ -7,8 +7,8 @@ import LinkedInIcon from './white-linkedin.svg';
 
 const NavBurgerMenuButton = styled.button`
   position: absolute;
-  top: ${({ theme }) => theme.spacing(1.5)};
-  right: ${({ theme }) => theme.spacing(1.5)};
+  top: ${({ theme }) => theme.spacing(1.4)};
+  right: ${({ theme }) => theme.spacing(1.4)};
   padding: 0;
   border: 0;
   display: flex;
