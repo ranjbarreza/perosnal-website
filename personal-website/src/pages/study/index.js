@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { PageLayout, H3, H5 } from '../../components';
+import { Helmet } from 'react-helmet';
 
 const StudyPageLayout = styled(PageLayout)`
   background-color: ${({ theme }) => theme.palette.darkGray.color};
@@ -61,6 +62,9 @@ const MeDiv = styled.div`
 export const Study = () => {
   return (
     <div>
+      <Helmet>
+        <title>Reza Ranjbar | Study</title>
+      </Helmet>
       <StudyPageLayout>
         <LeftPart>
           <H3>Chamran university Ahvaz, Iran</H3>

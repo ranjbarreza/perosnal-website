@@ -7,8 +7,8 @@ import LinkedInIcon from './white-linkedin.svg';
 
 const NavBurgerMenuButton = styled.button`
   position: absolute;
-  top: ${({ theme }) => theme.spacing(1.4)};
-  right: ${({ theme }) => theme.spacing(1.4)};
+  top: ${({ theme }) => theme.spacing(1.1)};
+  right: ${({ theme }) => theme.spacing(1.1)};
   padding: 0;
   border: 0;
   display: flex;
@@ -26,27 +26,20 @@ const NavBurgerMenuButton = styled.button`
   }
 
   ${({ theme }) => theme.breakpoint.up.sm} {
-    img {
-      height: ${({ theme }) => theme.spacing(4)};
-      width: ${({ theme }) => theme.spacing(4)};
-      transition-property: width, height;
-      transition-duration: 0.15s;
-      transition-timing-function: ease-in-out;
-    }
+    transition: transform 0.15s ease-in;
+    transform-origin: top right;
+    transform: scale(0.75);
 
     .closed-icon {
-      height: ${({ theme }) => theme.spacing(2)};
-      width: ${({ theme }) => theme.spacing(2)};
       opacity: 0;
     }
 
     :hover {
       cursor: pointer;
+      transform: scale(1.3);
 
       img {
         opacity: 100%;
-        height: ${({ theme }) => theme.spacing(4)};
-        width: ${({ theme }) => theme.spacing(4)};
       }
     }
   }

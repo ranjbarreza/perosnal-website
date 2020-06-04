@@ -52,7 +52,7 @@ export const Home = () => {
         <title>Reza Ranjbar | Homepage</title>
         <meta
           name="description"
-          content={'Reza Ranjbar, junior developer, personal create react app website'}
+          content={'Reza Ranjbar, junior developer, personal resume website'}
         />
         <meta
           name="keywords"

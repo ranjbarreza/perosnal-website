@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import backgroundImage from './project.jpg';
 import { PageLayout } from '../../components';
+import { Helmet } from 'react-helmet';
 
 const ProjectPageLayout = styled(PageLayout)`
   background-image: url(${backgroundImage});
@@ -55,6 +56,9 @@ const RightParagraph = styled.p`
 export const Project = () => {
   return (
     <div>
+      <Helmet>
+        <title>Reza Ranjbar | This project</title>
+      </Helmet>
       <ProjectPageLayout>
         <LeftParagraph>
           This website is a single page application made with create-react-app as a personal
